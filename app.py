@@ -11,7 +11,10 @@ from sklearn.preprocessing import StandardScaler
 
 os.environ["OMP_NUM_THREADS"] = "1"
 warnings.filterwarnings("ignore")
-pd.options.mode.use_inf_as_na = True
+try:
+    pd.options.mode.use_inf_as_na = True
+except Exception:
+    pass
 
 # ─────────────────────────────────────────────
 #  Page config
